@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 
 app.use('/', router);
 
-app.listen(process.argv[2] || process.env.PORT || 3000, ()=> {
-  console.log('Le serveur est en écoute sur ${process.argv[2] || process.env.PORT || 3000}');
+app.listen(process.argv[2] || process.env.PORT || 3000, () => {
+  console.log("Le serveur est en écoute sur ${process.argv[2] || process.env.PORT || 3000} et ${process.argv[2] || process.env.PORT || 3001}");
 });
 
