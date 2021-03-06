@@ -14,4 +14,5 @@
 * List processes : `pm2 list`
 
 ___
-* List NGinx processes : `tasklist /fi "imagename eq nginx.exe"`
+* List NGinx processes : `tasklist /fi "imagename eq nginx.exe"`\
+or : `for /l %g in () do @( tasklist /fi "imagename eq nginx.exe" & timeout /t 2 )` to refresh it every 2 secondes.
