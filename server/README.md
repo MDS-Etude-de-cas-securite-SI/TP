@@ -7,6 +7,8 @@ ___
 4. Launch NGinx `start nginx/nginx.exe` or go to `nginx/` and launch the .exe
 ___
 5. Access [http://localhost/](http://localhost/) in your browser.
+Or [https://localhost](https://localhost/) for ssl encryption.
+
 
 ## Complementary commands
 

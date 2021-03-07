@@ -8,3 +8,4 @@ L'application tourne en NodeJS et plusieurs instances sont créées à l'aide de
 
 ![](./server_config.svg)
 
+Le serveur est accessible en HTTP et en HTTPS, bien que le certificat pour le HTTPS soit auto-signé. (Aucun autorité de certification n'a validé notre certificat.)
