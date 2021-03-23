@@ -18,6 +18,9 @@
 - Souhaitable :
   - [ ]  virtualisation  ou  dockerisation
 
+
+## [Github repository](https://github.com/MDS-Etude-de-cas-securite-SI/TP)
+
 ## Sommaire
   - [Architecture du serveur](#architecture-du-serveur)
   - [WAF](#waf)
@@ -34,6 +37,67 @@ L'application tourne en NodeJS et plusieurs instances sont créées à l'aide de
 ![](./server_config.svg)
 
 Le serveur est accessible en HTTP et en HTTPS, bien que le certificat pour le HTTPS soit auto-signé. (Aucun autorité de certification n'a validé notre certificat.)
+
+### Fonctionnement de l'application
+> (voir [serveur README](./server/README.md))
+
+Le serveur répond en envoyant la vue HTML lorsqu'on accède à la racine.
+```js
+// ./server/routes/index.js
+
+const express = require('express');
+const path = require('path');
+
+const router = express.Router();
+const app = express();
+
+router.get('/', (req, res) => {
+  // res.send('ACCUEIL');
+  res.sendFile(path.join(__dirname + '/../views/index.html'));
+});
+
+app.use('/', router);
+
+app.listen(process.argv[2] || process.env.PORT || 3000, () => {
+  console.log("Le serveur est en écoute sur ${process.argv[2] || process.env.PORT || 3000} et ${process.argv[2] || process.env.PORT || 3001}");
+});
+```
+
+Le HTML étant un simple formulaire de création de compte :
+```html
+<!-- ./server/views/index.html -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- [...] -->
+</head>
+
+<body>
+  <section>
+    <h1>The formulaire</h1>
+    <form action="/" method="post">
+      <label for="nom">Nom</label>
+      <input autocomplete="off" type="text" name="nom" id="nom">
+      <label for="prenom">Prénom</label>
+      <input autocomplete="off" type="text" name="prenom" id="prenom">
+      <label for="date">Date de naissance</label>
+      <input autocomplete="off" type="date" name="date" id="date">
+      <label for="mail">Adresse mail</label>
+      <input autocomplete="off" type="email" name="mail" id="mail">
+      <label for="telephone">Telephone</label>
+      <input autocomplete="off" type="tel" name="telephone" id="telephone">
+      <label for="postal">Code postal</label>
+      <input autocomplete="off" type="text" name="postal" id="postal">
+      <input autocomplete="off" type="submit" value="Envoyer">
+    </form>
+  </section>
+</body>
+
+</html>
+
+```
+
 
 ## WAF
 
