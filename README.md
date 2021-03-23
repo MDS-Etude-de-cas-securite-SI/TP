@@ -1,17 +1,30 @@
 # Etude de cas sécurité SI « secu web »
 
-[consignes (pdf)](https://teams.microsoft.com/l/file/e47613ce-619b-432e-82dd-377b4b5b75b5?tenantId=8a2f18a9-8f0e-4f76-a585-9b07b3a38dea&fileType=pdf&objectUrl=https%3A%2F%2Feduservices.sharepoint.com%2Fsites%2FM1ESI333%2FDocuments%20partages%2FSECURISATION%20DU%20CODE%2FNFConsulting_secuWeb%20I1%20MDS%20Rennes.pdf&baseUrl=https%3A%2F%2Feduservices.sharepoint.com%2Fsites%2FM1ESI333&serviceName=teams&threadId=19:44220b72aa934a5ca67aba8e06c84dc7@thread.tacv2&messageId=1614673973035&groupId=b164e3e9-dad8-4e03-badf-910b4c64802a)
+* BARDAINE Cédric
+* TARDIF Dylan
+* PILORGE Dorian
 
 
-- Serveur
+<br>
+
+
+## --> [Github repository](https://github.com/MDS-Etude-de-cas-securite-SI/TP) <--
+
+
+<br>
+
+
+## Consignes [(pdf)](https://teams.microsoft.com/l/file/e47613ce-619b-432e-82dd-377b4b5b75b5?tenantId=8a2f18a9-8f0e-4f76-a585-9b07b3a38dea&fileType=pdf&objectUrl=https%3A%2F%2Feduservices.sharepoint.com%2Fsites%2FM1ESI333%2FDocuments%20partages%2FSECURISATION%20DU%20CODE%2FNFConsulting_secuWeb%20I1%20MDS%20Rennes.pdf&baseUrl=https%3A%2F%2Feduservices.sharepoint.com%2Fsites%2FM1ESI333&serviceName=teams&threadId=19:44220b72aa934a5ca67aba8e06c84dc7@thread.tacv2&messageId=1614673973035&groupId=b164e3e9-dad8-4e03-badf-910b4c64802a)
+
+- Serveur (**Cédric**)
   - [x] load-balancing
   - [x] HTTP proxy
   - [x] HTTPS
   - [x] Certificat auto-signé
-- Base de données
+- Base de données (**Dorian**)
   - [ ] création
   - [ ] *chiffrement  de  la  base*
-- WAF
+- WAF (**Dylan & Cédric**)
   - [ ] protection contre : *utilisation par un adresse IP non autorisées*
   - [x] documentation
 
@@ -19,16 +32,22 @@
   - [ ]  virtualisation  ou  dockerisation
 
 
-## [Github repository](https://github.com/MDS-Etude-de-cas-securite-SI/TP)
+<br>
+
 
 ## Sommaire
   - [Architecture du serveur](#architecture-du-serveur)
+    - [Fonctionnement de l'application](#fonctionnement-de-lapplication)
   - [WAF](#waf)
     - [NGINX Plus](#nginx-plus)
       - [Distributions supportées](#distributions-supportées)
       - [Fonctionnement](#fonctionnement)
 
+
+<br>
 <hr>
+<br>
+
 
 ## Architecture du serveur
 
