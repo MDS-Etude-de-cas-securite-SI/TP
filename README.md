@@ -78,7 +78,7 @@ ainsi qu'*NGINX App Protect* incluant le WAF basé sur la technologie de sécuri
 
 Pour utiliser *NGINX ModSecurity WAF* il faut modifier le fichier de configuration du reverse proxy en activant l'addon (`modsecurity on`) et en spécifiant l'adresse du fichier de configuration du WAF (`modsecurity_rules_file /etc/...`)
 L'exemple fournit par NGINX :
-```.
+```apacheconf
 server {
     listen 80;
     modsecurity on;
