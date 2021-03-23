@@ -96,13 +96,7 @@ server {
 
 ___
 
-Amis Windows s’abstenir.
-
-
-
-
-
-
+PS : Amis Windows s’abstenir.
 
 
 
