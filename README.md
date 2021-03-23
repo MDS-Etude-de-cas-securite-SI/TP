@@ -11,11 +11,21 @@
 - Base de données
   - [ ] création
   - [ ] *chiffrement  de  la  base*
-- [ ] WAF : protection contre : *utilisation par un adresse IP non autorisées*
+- WAF
+  - [ ] protection contre : *utilisation par un adresse IP non autorisées*
+  - [x] documentation
 
 - Souhaitable :
   - [ ]  virtualisation  ou  dockerisation
 
+## Sommaire
+  - [Architecture du serveur](#architecture-du-serveur)
+  - [WAF](#waf)
+    - [NGINX Plus](#nginx-plus)
+      - [Distributions supportées](#distributions-supportées)
+      - [Fonctionnement](#fonctionnement)
+
+<hr>
 
 ## Architecture du serveur
 
@@ -27,12 +37,13 @@ Le serveur est accessible en HTTP et en HTTPS, bien que le certificat pour le HT
 
 ## WAF
 
-> Le repo étant basé pour une utilisation Windows, l'application n'intègre pas de WAF ([raison](#Distributions-supportées)).
+> Le repo étant basé pour une utilisation Windows, l'application n'intègre pas de WAF ([raison](#distributions-support%C3%A9es)).
 À défaut, voici une explication du WAF et d'une possible intégration :
 
 
 Un WAF (Web Application Firewall) sert à protéger les applications web en surveillant et filtrant le trafic HTTP avant même l'accès à l'application.
 Il agit comme une sorte de bouclier pour l’application et protège des attaques XSS, d’inclusion de fichier et d’injection SQL.
+
 ![](https://avinetworks.com/wp-content/uploads/2019/03/web-application-firewall-diagram.svg)
 
 Il existe deux types de fonctionnement du WAF, il peut-être basé sur une liste noire (*ModSecurity de Nginx*) ou bien sur liste blanche (*NAXSI*).
@@ -61,7 +72,7 @@ NGINX Plus fournit une panoplie de fonctionnalités intégrées :
 
 ainsi qu'*NGINX App Protect* incluant le WAF basé sur la technologie de sécurité de [F5](https://www.f5.com/) (*NGINX ModSecurity WAF*).
 
-### Distributions supportées
+#### Distributions supportées
 
 * Alpine Linux
 * Amazon Linux
@@ -71,10 +82,9 @@ ainsi qu'*NGINX App Protect* incluant le WAF basé sur la technologie de sécuri
 * SLES
 * Ubuntu
 
-### Fonctionnement
+#### Fonctionnement
 
-(Voir : https://docs.nginx.com/nginx-waf/admin-guide/nginx-plus-modsecurity-waf-installation-logging/#protecting-the-demo-web-application
-)
+(Voir : https://docs.nginx.com/nginx-waf/admin-guide/nginx-plus-modsecurity-waf-installation-logging/#protecting-the-demo-web-application)
 
 Pour utiliser *NGINX ModSecurity WAF* il faut modifier le fichier de configuration du reverse proxy en activant l'addon (`modsecurity on`) et en spécifiant l'adresse du fichier de configuration du WAF (`modsecurity_rules_file /etc/...`)
 L'exemple fournit par NGINX :
@@ -107,3 +117,5 @@ PS : Amis Windows s’abstenir.
 
 
 
+
+<style> /* Auhor: Cédric B. GitHub: https://github.com/CedricBardaine Date: 2021 */ html { background-color: white; /* background-color: #FFFEEE; */ } body { color: black; text-align: justify; } code { background-color: black; color: lightgreen; padding: 2px 4px; /* Y X */ } pre code { padding: unset; } em { color: brown; } blockquote { border-color: brown; background-color: #EEEEEE !important; } blockquote p { background-color: inherit } /* p:hover { background-color: #FFFEEE; padding-left: 4px; } */ h1, h2, h3, h4, h5, h6 { font-size: 64px; padding: 32px 0px 4px 0px; /* top right bottom left */ text-align: center; } h2, h3, h4, h5, h6 { font-size: 32px; text-indent: 8px; text-decoration: underline; text-align: inherit; } h3, h4, h5, h6 { font-size: 28px; } h4, h5, h6 { font-size: 28px; } h5, h6 { font-size: 24px; } h6 { font-size: 20px; } img { border: solid 1px black; /* margin: 4px; */ } </style>
