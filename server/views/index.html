@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP - Sécurité Web | Formulaire</title>
+  <style>
+    html,
+    * {
+      margin: 0;
+      box-sizing: border-box;
+      padding: 0;
+    }
+
+    body {
+      background: rgb(247, 247, 247);
+      padding: 2em;
+    }
+
+    section {
+      max-width: 70vw;
+      margin: 0 auto;
+    }
+    form {
+      padding: 2em 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+
+    label,
+    input {
+      width: 100%;
+    }
+
+    input {
+      margin-bottom: .5em;
+      padding: .4em;
+    }
+
+    input:last-of-type {
+      margin-top: .7em;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>The formulaire</h1>
+    <form action="/" method="post">
+      <label for="nom">Nom</label>
+      <input autocomplete="off" type="text" name="nom" id="nom">
+      <label for="prenom">Prénom</label>
+      <input autocomplete="off" type="text" name="prenom" id="prenom">
+      <label for="date">Date de naissance</label>
+      <input autocomplete="off" type="date" name="date" id="date">
+      <label for="mail">Adresse mail</label>
+      <input autocomplete="off" type="email" name="mail" id="mail">
+      <label for="telephone">Telephone</label>
+      <input autocomplete="off" type="tel" name="telephone" id="telephone">
+      <label for="postal">Code postal</label>
+      <input autocomplete="off" type="text" name="postal" id="postal">
+      <input autocomplete="off" type="submit" value="Envoyer">
+    </form>
+  </section>
+</body>
+</html>
