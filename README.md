@@ -171,15 +171,3 @@ server {
 ___
 
 PS : Amis Windows s’abstenir.
-
-
-
-
-
-
-
-
-
-
-
-<style> /* Auhor: Cédric B. GitHub: https://github.com/CedricBardaine Date: 2021 */ html { background-color: white; /* background-color: #FFFEEE; */ } body { color: black; text-align: justify; } code { background-color: black; color: lightgreen; padding: 2px 4px; /* Y X */ } pre code { padding: unset; } em { color: brown; } blockquote { border-color: brown; background-color: #EEEEEE !important; } blockquote p { background-color: inherit } /* p:hover { background-color: #FFFEEE; padding-left: 4px; } */ h1, h2, h3, h4, h5, h6 { font-size: 64px; padding: 32px 0px 4px 0px; /* top right bottom left */ text-align: center; } h2, h3, h4, h5, h6 { font-size: 32px; text-indent: 8px; text-decoration: underline; text-align: inherit; } h3, h4, h5, h6 { font-size: 28px; } h4, h5, h6 { font-size: 28px; } h5, h6 { font-size: 24px; } h6 { font-size: 20px; } img { border: solid 1px black; /* margin: 4px; */ } </style>
